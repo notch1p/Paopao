@@ -12,19 +12,19 @@ import com.tedu.manager.GameElement;
 import com.tedu.show.GameJFrame;
 
 /**
- * author: ÀîìÚŸ@
- * Íæ¼Ò¿ØÖÆµÄÌ¹¿Ë¿ÉÒÔÒÆ¶¯ºÍÉä»÷¡£
- * µĞ·½Ì¹¿Ë×Ô¶¯ÒÆ¶¯£¬²¢ÓëÍæ¼ÒÌ¹¿Ë¶ÔÕ½¡£
- * ÓÎÏ·°üº¬¶à¸ö¹Ø¿¨£¬Ã¿¸ö¹Ø¿¨ÓĞ²»Í¬ÊıÁ¿µÄµĞ·½Ì¹¿Ë¡£
- * Íæ¼ÒĞèÒªÏûÃğËùÓĞµĞ·½Ì¹¿ËÒÔ½øÈëÏÂÒ»¹Ø¡£
+ * author: æç† çƒœ
+ * ç©å®¶æ§åˆ¶çš„å¦å…‹å¯ä»¥ç§»åŠ¨å’Œå°„å‡»ã€‚
+ * æ•Œæ–¹å¦å…‹è‡ªåŠ¨ç§»åŠ¨ï¼Œå¹¶ä¸ç©å®¶å¦å…‹å¯¹æˆ˜ã€‚
+ * æ¸¸æˆåŒ…å«å¤šä¸ªå…³å¡ï¼Œæ¯ä¸ªå…³å¡æœ‰ä¸åŒæ•°é‡çš„æ•Œæ–¹å¦å…‹ã€‚
+ * ç©å®¶éœ€è¦æ¶ˆç­æ‰€æœ‰æ•Œæ–¹å¦å…‹ä»¥è¿›å…¥ä¸‹ä¸€å…³ã€‚
  */
 
 public class GameListener implements KeyListener {
     private ElementManager em = ElementManager.getManager();
 
-    // ¼ÇÂ¼°´ÏÂµÄ·½Ïò¼ü
+    // è®°å½•æŒ‰ä¸‹çš„æ–¹å‘é”®
     private Set<Integer> set = new HashSet<>();
-    //¼ÇÂ¼µ±Ç°ÔİÍ£×´Ì¬
+    //è®°å½•å½“å‰æš‚åœçŠ¶æ€
     private boolean isPause=false;
     @Override
     public void keyTyped(KeyEvent e) {
@@ -37,13 +37,13 @@ public class GameListener implements KeyListener {
 //		System.out.println("keyPressed: " + e.getKeyCode());
         int key = e.getKeyCode();
         if (set.contains(key)) {
-            // ·ÀÖ¹°´×¡Ò»¸ö·½Ïò¼ü²»·Å£¬Á¬Ğø¶à´ÎĞŞ¸Ä×´Ì¬
-            // Ö®ËùÒÔÓÃset¼¯ºÏ£¬ÊÇÒòÎª¿ÉÄÜ²»Ö»ÓĞ4¸ö·½Ïò¼ü£¬¿ÉÄÜ»¹ÓĞÆäËû¼ü
+            // é˜²æ­¢æŒ‰ä½ä¸€ä¸ªæ–¹å‘é”®ä¸æ”¾ï¼Œè¿ç»­å¤šæ¬¡ä¿®æ”¹çŠ¶æ€
+            // ä¹‹æ‰€ä»¥ç”¨seté›†åˆï¼Œæ˜¯å› ä¸ºå¯èƒ½ä¸åªæœ‰4ä¸ªæ–¹å‘é”®ï¼Œå¯èƒ½è¿˜æœ‰å…¶ä»–é”®
             return;
         }
         set.add(key);
 
-        // ÄÃµ½Íæ¼Ò¼¯ºÏ
+        // æ‹¿åˆ°ç©å®¶é›†åˆ
         List<ElementObj> playList = em.getElementsByKey(GameElement.PLAYER);
         for (ElementObj obj : playList) {
             obj.keyClick(true, key);
@@ -52,11 +52,11 @@ public class GameListener implements KeyListener {
 
     @Override
     public void keyReleased(KeyEvent e) {
-        // ½ûÓÃdebugÊä³ö½µµÍÑÓ³Ù
+        // ç¦ç”¨debugè¾“å‡ºé™ä½å»¶è¿Ÿ
         System.out.println("keyReleased: " + e.getKeyCode());
 
         int key = e.getKeyCode();
-        if (!set.contains(key)) { // ²»  ´æÔÚ
+        if (!set.contains(key)) { // ä¸  å­˜åœ¨
             return;
         }
         set.remove(key);

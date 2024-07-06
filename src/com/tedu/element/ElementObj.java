@@ -7,16 +7,16 @@ import java.util.concurrent.atomic.AtomicInteger;
 import javax.swing.ImageIcon;
 
 /**
- * author: ÀîìÚŸ@
- * ÀàÊôĞÔ
- * Î»ÖÃºÍ³ß´ç£º
- * int x, y£ºÔªËØµÄ×ø±êÎ»ÖÃ¡£
- * int w, h£ºÔªËØµÄ¿í¶ÈºÍ¸ß¶È¡£
- * Í¼ÏñºÍÅÅĞò£º
- * ImageIcon icon£ºÔªËØµÄÍ¼±ê£¬ÓÃÓÚ»æÖÆÔªËØ¡£
- * int sort£ºÓÃÓÚÅÅĞòµÄ×Ö¶Î£¬¿ÉÄÜÔÚ»æÖÆË³Ğò»òÅö×²¼ì²âÖĞÊ¹ÓÃ¡£
- * ×´Ì¬£º
- * boolean live£ºÔªËØÊÇ·ñ´æ»îµÄ±êÖ¾¡£
+ * author: æç† çƒœ
+ * ç±»å±æ€§
+ * ä½ç½®å’Œå°ºå¯¸ï¼š
+ * int x, yï¼šå…ƒç´ çš„åæ ‡ä½ç½®ã€‚
+ * int w, hï¼šå…ƒç´ çš„å®½åº¦å’Œé«˜åº¦ã€‚
+ * å›¾åƒå’Œæ’åºï¼š
+ * ImageIcon iconï¼šå…ƒç´ çš„å›¾æ ‡ï¼Œç”¨äºç»˜åˆ¶å…ƒç´ ã€‚
+ * int sortï¼šç”¨äºæ’åºçš„å­—æ®µï¼Œå¯èƒ½åœ¨ç»˜åˆ¶é¡ºåºæˆ–ç¢°æ’æ£€æµ‹ä¸­ä½¿ç”¨ã€‚
+ * çŠ¶æ€ï¼š
+ * boolean liveï¼šå…ƒç´ æ˜¯å¦å­˜æ´»çš„æ ‡å¿—ã€‚
  */
 
 public abstract class ElementObj implements Comparable<ElementObj> {
@@ -33,7 +33,7 @@ public abstract class ElementObj implements Comparable<ElementObj> {
 
     private boolean live = true;
 
-    // ²»º¬²Î¹¹Ôìº¯Êı
+    // ä¸å«å‚æ„é€ å‡½æ•°
     public ElementObj() {
     }
 
@@ -55,9 +55,9 @@ public abstract class ElementObj implements Comparable<ElementObj> {
 
 
     public final void model(long gameTime) {
-        updateImage(gameTime); // »»×°ĞèÒª¼ä¸ôÊ±¼ä
-        move(); // ÒÆ¶¯
-        add(); // ·¢Éä×Óµ¯
+        updateImage(gameTime); // æ¢è£…éœ€è¦é—´éš”æ—¶é—´
+        move(); // ç§»åŠ¨
+        add(); // å‘å°„å­å¼¹
     }
 
 

@@ -1,7 +1,7 @@
 package com.tedu.element;
 
 /**
- *author: ÀîìÚŸ@
+ *author: æç† çƒœ
  */
 public class Die {
 
